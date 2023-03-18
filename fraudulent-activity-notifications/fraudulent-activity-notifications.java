@@ -6,7 +6,7 @@ import static java.util.stream.Collectors.toList;
 /*
 Code by longtqtqn
 
-Using default template read input from console of hackerrank :p
+Using default template read/write console of hackerrank :p
 */
 class Result {
 
