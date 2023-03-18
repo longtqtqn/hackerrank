@@ -5,12 +5,12 @@ import static java.util.stream.Collectors.toList;
 
 /*
 Code by longtqtqn
-*/
 
+Using default template read input from console of hackerrank :p
+*/
 class Result {
 
     static Map<Integer, Integer> map = new TreeMap<>();
-    static int d;
     static {
         for (int i = 0; i <= 200; ++i) {
             map.put(i, 0);
