@@ -10,3 +10,6 @@
 
 ### Maximum Palindromes
  * python3 (Explain my solution in cmt)
+
+### Abbreviation
+ * c++14
