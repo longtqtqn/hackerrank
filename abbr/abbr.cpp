@@ -1,6 +1,6 @@
-/*
-Code by longtqtqn
-*/
+/**
+ * Code by longtqtqn
+ */
 #include <bits/stdc++.h>
 using namespace std;
 

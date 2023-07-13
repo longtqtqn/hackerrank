@@ -1,13 +1,12 @@
+/**
+ * Code by longtqtqn
+ * Using default template read/write console of hackerrank :p
+ */
 import java.io.*;
 import java.util.*;
 import java.util.stream.*;
 import static java.util.stream.Collectors.toList;
 
-/*
-Code by longtqtqn
-
-Using default template read/write console of hackerrank :p
-*/
 class Result {
 
     static Map<Integer, Integer> map = new TreeMap<>();
@@ -16,7 +15,7 @@ class Result {
             map.put(i, 0);
         }
     }
-    
+
     private static double getMedian(int d) {
         Integer count = 0;
         int remember = -1;
@@ -26,13 +25,13 @@ class Result {
         while (it.hasNext()) {
             Map.Entry<Integer, Integer> pair = it.next();
             count += pair.getValue();
-            if (count > mid) {    
+            if (count > mid) {
                 if (d % 2 == 1 || remember == -1) {
                     return pair.getKey();
-                }            
+                }
                 return (remember + pair.getKey()) / 2.0;
             }
-            if (count == mid && d % 2 == 0) {         
+            if (count == mid && d % 2 == 0) {
                 remember = pair.getKey();
             }
         }
@@ -43,28 +42,28 @@ class Result {
         int value = map.get(key);
         map.put(key, value + 1);
     }
-    
+
     private static void decMap(int key) {
         int value = map.get(key);
         map.put(key, value - 1);
     }
-    
+
     public static int activityNotifications(List<Integer> expenditure, int d) {
         int rs = 0;
         for (int i = 0; i < d; ++i) {
             incMap(expenditure.get(i));
         }
-        
+
         for (int i = d; i < expenditure.size(); ++i) {
-            double median = getMedian(d);       
+            double median = getMedian(d);
             int exp = expenditure.get(i);
             if (exp >= median * 2) {
                 ++rs;
-            } 
+            }
             decMap(expenditure.get(i - d));
-            incMap(expenditure.get(i)); 
+            incMap(expenditure.get(i));
         }
-        
+
         return rs;
     }
 

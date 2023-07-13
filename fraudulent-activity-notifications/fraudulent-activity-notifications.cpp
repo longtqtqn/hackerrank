@@ -1,12 +1,10 @@
+/**
+ * Code by longtqtqn
+ * Using default template read/write console of hackerrank :p
+ */
 #include <bits/stdc++.h>
 
 using namespace std;
-
-/*
-Code by longtqtqn
-
-Using default template read/write console of hackerrank :p
-*/
 
 string ltrim(const string &);
 string rtrim(const string &);
@@ -18,17 +16,17 @@ double getMedian(int d) {
     int count = 0;
     int remember = -1;
     int mid = d / 2;
-    
+
     for (auto const& pair : m)
     {
         count += pair.second;
-        if (count > mid) {    
+        if (count > mid) {
             if (d % 2 == 1 || remember == -1) {
                 return pair.first;
-            }  
+            }
             return (remember + pair.first) / 2.0;
         }
-        if (count == mid && d % 2 == 0) {         
+        if (count == mid && d % 2 == 0) {
             remember = pair.first;
         }
     }
@@ -40,12 +38,12 @@ int activityNotifications(vector<int> expenditure, int d) {
     for (int i = 0; i <= 200; ++i) {
         m[i] = 0;
     }
-    
+
     for (int i = 0; i < d; ++i) {
         ++m[expenditure[i]];
     }
     for (int i = d; i < expenditure.size(); ++i) {
-        double median = getMedian(d);    
+        double median = getMedian(d);
         int exp = expenditure[i];
         if (exp >= median * 2) {
             ++rs;

@@ -1,8 +1,7 @@
+/**
+ * Code by longtqtqn
+ */
 #include <bits/stdc++.h>
-
-/*
-Code by longtqtqn
-*/
 
 using namespace std;
 
@@ -35,27 +34,27 @@ int solveDESC(vector<int> arr, map<int, int> m) {
             arr[posOfNum] = numInArr;
             ++count;
         }
-        --posOfArr;    
+        --posOfArr;
     }
     return count;
 }
 
 
 int main() {
-    
+
     int n;
     vector<int> arr;
     map<int, int> m;
     cin >> n;
     arr.resize(n);
-    
+
     for (int i = 0; i < n; ++i) {
         cin >> arr[i];
-        m[arr[i]] = i;       
+        m[arr[i]] = i;
     }
-    
+
     int rsASC = solveASC(arr, m);
     int rsDESC = solveDESC(arr, m);
-    
+
     cout << (rsASC < rsDESC ? rsASC : rsDESC);
 }
