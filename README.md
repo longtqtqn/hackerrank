@@ -13,3 +13,6 @@
 
 ### Abbreviation
  * c++14
+
+### Equal
+ * c++14
