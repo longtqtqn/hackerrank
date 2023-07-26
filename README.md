@@ -17,6 +17,7 @@
 ### Equal
  * c++14
 
-### coin-change
+### The Coin Change Problem
  * c++14
  * java8
+ 
