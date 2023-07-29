@@ -20,4 +20,7 @@
 ### The Coin Change Problem
  * c++14
  * java8
+
+### Construct the Array
+ * c++14
  
