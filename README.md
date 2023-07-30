@@ -24,3 +24,7 @@
 ### Construct the Array
  * c++14
  * java8
+
+### Sam and substrings
+ * c++14
+ * java8
