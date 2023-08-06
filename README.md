@@ -28,3 +28,6 @@
 ### Sam and substrings
  * c++14
  * java8
+
+# Xor and Sum
+ * c++14
