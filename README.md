@@ -31,3 +31,6 @@
 
 ### Xor and Sum
  * c++14
+
+### Sherlock and Cost
+ + c++14
