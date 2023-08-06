@@ -33,4 +33,5 @@
  * c++14
 
 ### Sherlock and Cost
- + c++14
+ * c++14
+ * java8
