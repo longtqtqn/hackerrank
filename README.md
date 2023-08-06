@@ -1,4 +1,4 @@
-## This repo use to share some my code in hackerrank
+## This repo I use to share some code on HackerRank
 
 ### Lily's Homework
  * c++14
