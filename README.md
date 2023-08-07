@@ -35,3 +35,6 @@
 ### Sherlock and Cost
  * c++14
  * java8
+
+### Knapsack
+ * c++14
