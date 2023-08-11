@@ -41,3 +41,4 @@
 
 ### Stock Maximize
  * c++14
+ * java8
