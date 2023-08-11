@@ -38,3 +38,6 @@
 
 ### Knapsack
  * c++14
+
+### Stock Maximize
+ * c++14
