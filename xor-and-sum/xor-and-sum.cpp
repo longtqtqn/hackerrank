@@ -6,7 +6,7 @@
 using namespace std;
 const int MMOD = 1e9 + 7;
 
-int64_t modpow(int64_t base, int64_t exp, int64_t modulus = MMOD) {
+int64_t powMod(int64_t base, int64_t exp, int64_t modulus = MMOD) {
     base %= modulus;
     int64_t result = 1;
     while (exp > 0) {
@@ -30,7 +30,7 @@ int main() {
 
     if (b.size() > a.size()) {
         while (ib < b.size() - a.size() - 1) {
-            curB = (curB * 2 % MMOD + (b[ib] == '1') * modpow(2, a.size())) % MMOD;            
+            curB = (curB * 2 % MMOD + (b[ib] == '1') * powMod(2, a.size())) % MMOD;            
             ++ib;
         }
         quB.push(b[ib]);
@@ -38,8 +38,8 @@ int main() {
         plusBGreaterASize = true;
     } else if (a.size() > b.size()){
         while (ia < a.size() - b.size()) {
-            curA = (curA + (a[ia] == '1') * modpow(2, a.size() - ia - 1)) % MMOD;
-            curNotA = (curNotA + (a[ia] == '0') * modpow(2, a.size() - ia - 1)) % MMOD;
+            curA = (curA + (a[ia] == '1') * powMod(2, a.size() - ia - 1)) % MMOD;
+            curNotA = (curNotA + (a[ia] == '0') * powMod(2, a.size() - ia - 1)) % MMOD;
             ++ia;
         }      
     }
@@ -54,8 +54,8 @@ int main() {
         }
         
         if (ia < a.size()) {
-            curA = (curA + (a[ia] == '1') * modpow(2, a.size() - ia - 1)) % MMOD;
-            curNotA = (curNotA + (a[ia] == '0') * modpow(2, a.size() - ia - 1)) % MMOD;
+            curA = (curA + (a[ia] == '1') * powMod(2, a.size() - ia - 1)) % MMOD;
+            curNotA = (curNotA + (a[ia] == '0') * powMod(2, a.size() - ia - 1)) % MMOD;
             ++ia;
         }
         
@@ -71,7 +71,7 @@ int main() {
                 tmp = quB.front();
                 quB.pop();
             }          
-            curB = (curB * 2 % MMOD + (tmp == '1') * modpow(2, a.size())) % MMOD;
+            curB = (curB * 2 % MMOD + (tmp == '1') * powMod(2, a.size())) % MMOD;
             rs = (rs + curB) % MMOD;     
         } else {
             if (i + b.size() == a.size()) {
@@ -86,7 +86,7 @@ int main() {
         ia = a.size() - b.size() + 1;
     }
     while( ia < a.size()) {
-        rs = (rs + (a[ia] == '1') * modpow(2, a.size() - ia - 1) * dup % MMOD ) % MMOD;
+        rs = (rs + (a[ia] == '1') * powMod(2, a.size() - ia - 1) * dup % MMOD ) % MMOD;
         ++ia;
         ++dup;
     } 
