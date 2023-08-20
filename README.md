@@ -62,3 +62,4 @@ Just share for fun ^^
 ### The Longest Increasing Subsequence
 [This problem here](https://www.hackerrank.com/challenges/longest-increasing-subsequent/problem)
   * c++20
+  * java8
