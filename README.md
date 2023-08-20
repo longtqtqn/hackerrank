@@ -58,3 +58,7 @@ Just share for fun ^^
  * java8
  * bash
  * javascript
+
+### The Longest Increasing Subsequence
+[This problem here](https://www.hackerrank.com/challenges/longest-increasing-subsequent/problem)
+  * c++20
